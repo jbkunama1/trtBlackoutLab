@@ -1,0 +1,20 @@
+# Node / JS
+node_modules/
+npm-debug.log*
+yarn.lock
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Docker
+*.pid
+*.seed
+.env
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
