@@ -4,6 +4,8 @@
 
 > 🎮 Ein kooperatives Browser-Spiel für den Unterricht – inspiriert von Escape-Games rund um Stromausfall, Energiewende und die All Electric Society.
 
+Story:
+https://gemini.google.com/share/97996859cb2d
 ---
 
 ## 🧠 Was ist Blackout Lab?
