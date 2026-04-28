@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Blackout Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <img src="assets/logo.png" alt="Blackout Lab Logo" class="logo">
+    <div class="title-block">
+      <h1>Blackout Lab</h1>
+      <p>Ein kooperatives Online-Escape-Game zur Energiewende.</p>
+    </div>
+  </header>
+
+  <main id="app">
+    <section id="intro" class="card card-house">
+      <div class="house-header">
+        <span class="house-number">Start</span>
+      </div>
+      <div class="card-content">
+        <p>
+          In deiner Stadt ist der Strom ausgefallen. Nichts funktioniert mehr – fast nichts.
+          Arbeitet euch Haus für Haus durch die Rätsel, findet die Codes und stellt die
+          Versorgung wieder her.
+        </p>
+        <button id="btn-start" class="btn primary">Spiel starten</button>
+      </div>
+    </section>
+
+    <section id="level-container"></section>
+
+    <section id="outro" class="card card-house hidden">
+      <div class="house-header">
+        <span class="house-number">✅</span>
+      </div>
+      <div class="card-content">
+        <h2>Geschafft!</h2>
+        <p id="outro-text">
+          Ihr habt alle Rätsel gelöst und den Strom in eurer Stadt wiederhergestellt.
+        </p>
+        <button id="btn-restart" class="btn">Noch einmal spielen</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>
+      „Blackout Lab“ – freie Unterrichtsumsetzung inspiriert von Escape-Games zur
+      All Electric Society.
+    </small>
+  </footer>
+
+  <script src="js/game.js"></script>
+</body>
+</html>

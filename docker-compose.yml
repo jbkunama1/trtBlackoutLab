@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  blackout-lab:
+    build: .
+    container_name: blackout-lab
+    restart: unless-stopped
+    ports:
+      - "8080:80"
