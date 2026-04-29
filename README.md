@@ -4,32 +4,7 @@
 
 ![Blackout Lab Logo](assets/logo.png)
 
-[![License: MIT](https://img.shields.io/badge/Lizenz-MIT-blue.svg)](LICENSE)
-[![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white)](#)
-[![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?logo=css3&logoColor=white)](#)
-[![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black)](#)
-[![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?logo=docker&logoColor=white)](#-variante-3-docker--nginx)
-[![Contributions Welcome](https://img.shields.io/badge/Beitr%C3%A4ge-willkommen-brightgreen.svg)](#-mitmachen--beitragen)
-
-> 🎮 Ein kooperatives Browser-Escape-Game für den Unterricht – rund um Stromausfall, Energiewende und die All Electric Society.
-
-[🇩🇪 Deutsch](#-was-ist-blackout-lab) · [🇬🇧 English](#-blackout-lab--online-escape-game-about-the-energy-transition) · [📖 Story](https://gemini.google.com/share/97996859cb2d) · [🚀 Schnellstart](#-schnellstart)
-
-</div>
-
----
-
-## 📋 Inhalt
-
-- [Was ist Blackout Lab?](#-was-ist-blackout-lab)
-- [Features auf einen Blick](#-features-auf-einen-blick)
-- [Die 6 Level im Überblick](#-die-6-level-im-überblick)
-- [Projektstruktur](#-projektstruktur)
-- [Schnellstart](#-schnellstart)
-- [Pädagogischer Einsatz](#-pädagogischer-einsatz)
-- [Rätsel anpassen](#-rätsel-anpassen)
-- [Mitmachen & Beitragen](#-mitmachen--beitragen)
-- [Lizenz & Hinweise](#-lizenz--hinweise)
+> 🎮 Ein kooperatives Browser-Spiel für den Unterricht – inspiriert von Escape-Games rund um Stromausfall, Energiewende und TheRealTeacher - Technik
 
 ---
 
@@ -249,33 +224,8 @@ Beiträge sind herzlich willkommen! 🎉
 
 ![Blackout Lab Logo](assets/logo.png)
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?logo=html5&logoColor=white)](#)
-[![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?logo=css3&logoColor=white)](#)
-[![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?logo=javascript&logoColor=black)](#)
-[![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?logo=docker&logoColor=white)](#-option-3-docker--nginx)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](#-contributing)
-
-> 🎮 A cooperative browser escape game for the classroom – about blackouts,
-> energy storage and the All Electric Society.
-
-[🇩🇪 Deutsch](#️-blackout-lab--online-escape-game-zur-energiewende) · [🇬🇧 English](#-what-is-blackout-lab) · [🚀 Getting Started](#-getting-started)
-
-</div>
-
----
-
-## 📋 Table of Contents
-
-- [What is Blackout Lab?](#-what-is-blackout-lab)
-- [Key Features](#-key-features)
-- [The 6 Levels](#-the-6-levels)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Educational Use](#-educational-use)
-- [Customizing Levels](#-customizing-levels)
-- [Contributing](#-contributing)
-- [License & Credits](#-license--credits)
+> 🎮 A cooperative browser game for the classroom – inspired by escape games
+> about blackouts, energy storage and TheRealTeacher - Technik
 
 ---
 
