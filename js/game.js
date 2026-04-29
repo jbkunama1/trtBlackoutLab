@@ -7,7 +7,7 @@ const levels = [
     intro: "Klickt alle Dinge an, die auch bei einem großflächigen Stromausfall noch funktionieren können.",
     type: "multi-select",
     icon: "🔍",
-    hint: "Denkt an Geräte, die **kein** Stromnetz brauchen oder ihren eigenen Speicher haben.",
+    hint: "Denkt an Geräte, die <strong>kein</strong> Stromnetz brauchen oder ihren eigenen Speicher haben.",
     options: [
       { id: "bike", label: "Fahrrad", works: true },
       { id: "charger", label: "Ladegerät in Steckdose", works: false },
@@ -120,27 +120,6 @@ const levels = [
   }
 ];
 
-      const hiddenCode = "6025";
-      const highlightCols = [1, 3, 5, 7];
-      for (let r = 0; r < 10; r++) {
-        const row = [];
-        for (let c = 0; c < 10; c++) {
-          let val;
-          if (highlightCols.includes(c) && Math.random() < 0.7) {
-            val = 2;
-          } else {
-            val = Math.floor(Math.random() * 10);
-          }
-          row.push(val);
-        }
-        rows.push(row);
-      }
-      return { rows, hiddenCode };
-    },
-    successCode: "6025"
-  }
-];
-
 let currentLevelIndex = -1;
 
 let gameStartTime = null;
@@ -177,6 +156,7 @@ function startGame() {
 }
 
 function restartGame() {
+  startTimer();
   currentLevelIndex = 0;
   document.getElementById("outro").classList.add("hidden");
   renderCurrentLevel();
@@ -212,7 +192,7 @@ function renderCurrentLevel() {
   content.appendChild(h2);
 
   const pIntro = document.createElement("p");
-  pIntro.innerHTML = level.intro;
+  pIntro.textContent = level.intro;
   content.appendChild(pIntro);
 
   const puzzleContainer = document.createElement("div");
@@ -271,15 +251,24 @@ function renderMultiSelect(level, container, btnCheck, feedback, codeInfo, btnNe
   level.options.forEach(opt => {
     const div = document.createElement("div");
     div.className = "option-card";
+    div.setAttribute("role", "checkbox");
+    div.setAttribute("aria-checked", "false");
+    div.setAttribute("tabindex", "0");
     div.innerHTML = `<div class="option-title">${opt.label}</div>`;
-    div.addEventListener("click", () => {
+    const toggle = () => {
       if (selected.has(opt.id)) {
         selected.delete(opt.id);
         div.classList.remove("selected");
+        div.setAttribute("aria-checked", "false");
       } else {
         selected.add(opt.id);
         div.classList.add("selected");
+        div.setAttribute("aria-checked", "true");
       }
+    };
+    div.addEventListener("click", toggle);
+    div.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
     });
     grid.appendChild(div);
   });
@@ -300,11 +289,22 @@ function renderSingleChoice(level, container, btnCheck, feedback, codeInfo, btnN
   level.options.forEach(opt => {
     const div = document.createElement("div");
     div.className = "option-card";
+    div.setAttribute("role", "radio");
+    div.setAttribute("aria-checked", "false");
+    div.setAttribute("tabindex", "0");
     div.innerHTML = `<div class="option-title">${opt.label}</div>`;
-    div.addEventListener("click", () => {
+    const select = () => {
       selectedId = opt.id;
-      [...grid.children].forEach(c => c.classList.remove("selected"));
+      [...grid.children].forEach(c => {
+        c.classList.remove("selected");
+        c.setAttribute("aria-checked", "false");
+      });
       div.classList.add("selected");
+      div.setAttribute("aria-checked", "true");
+    };
+    div.addEventListener("click", select);
+    div.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(); }
     });
     grid.appendChild(div);
   });
@@ -330,14 +330,15 @@ function renderTextQuiz(level, container, btnCheck, feedback, codeInfo, btnNext)
   const q1 = document.createElement("input");
   q1.type = "number";
   q1.placeholder = "Antwort 1";
-  q1.style.marginRight = "0.5rem";
+  q1.className = "quiz-input";
 
   const q2 = document.createElement("input");
   q2.type = "number";
   q2.placeholder = "Antwort 2";
+  q2.className = "quiz-input";
 
   const inputs = document.createElement("div");
-  inputs.style.marginTop = "0.5rem";
+  inputs.className = "quiz-inputs";
   inputs.appendChild(q1);
   inputs.appendChild(q2);
 
@@ -359,6 +360,7 @@ function renderNumberGrid(level, container, btnCheck, feedback, codeInfo, btnNex
   const grid = document.createElement("div");
   grid.className = "number-grid";
 
+  const cells = [];
   rows.forEach(row => {
     row.forEach(val => {
       const cell = document.createElement("div");
@@ -370,13 +372,16 @@ function renderNumberGrid(level, container, btnCheck, feedback, codeInfo, btnNex
         }
       });
       grid.appendChild(cell);
+      cells.push({ val, cell });
     });
   });
 
   container.appendChild(grid);
 
   btnCheck.addEventListener("click", () => {
-    handleResult(true, level, feedback, codeInfo, btnCheck, btnNext);
+    const allTwosMarked = cells.every(({ val, cell }) => val !== 2 || cell.classList.contains("marked"));
+    const noWrongMarked = cells.every(({ val, cell }) => val === 2 || !cell.classList.contains("marked"));
+    handleResult(allTwosMarked && noWrongMarked, level, feedback, codeInfo, btnCheck, btnNext);
   });
 }
 
