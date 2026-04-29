@@ -91,7 +91,7 @@ trtBlackoutLab/
 │  └─ README.md           # English documentation
 ├─ 📁 css/
 │  └─ styles.css          # 🎨 Layout, Haus-Design & Animationen
-├─ �� js/
+├─ 📁 js/
 │  ├─ game.js             # 🇩🇪 Spiel-Logik & Rätseldefinitionen
 │  └─ game-en.js          # 🇬🇧 English game logic & level definitions
 ├─ 📁 assets/
@@ -259,7 +259,7 @@ Beiträge sind herzlich willkommen! 🎉
 > 🎮 A cooperative browser escape game for the classroom – about blackouts,
 > energy storage and the All Electric Society.
 
-[��🇪 Deutsch](#️-blackout-lab--online-escape-game-zur-energiewende) · [🇬🇧 English](#-what-is-blackout-lab) · [🚀 Getting Started](#-getting-started)
+[🇩🇪 Deutsch](#️-blackout-lab--online-escape-game-zur-energiewende) · [🇬🇧 English](#-what-is-blackout-lab) · [🚀 Getting Started](#-getting-started)
 
 </div>
 

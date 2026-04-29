@@ -32,7 +32,7 @@
 
 ---
 
-## �� What is Blackout Lab?
+## 🧠 What is Blackout Lab?
 
 **Blackout Lab** is a lightweight, browser-based escape game designed for STEM
 education (roughly grade 8 and up). Students solve six interconnected puzzles
