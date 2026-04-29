@@ -2,7 +2,7 @@
 
 ![Blackout Lab Logo](assets/logo.png)
 
-> 🎮 Ein kooperatives Browser-Spiel für den Unterricht – inspiriert von Escape-Games rund um Stromausfall, Energiewende und die All Electric Society.
+> 🎮 Ein kooperatives Browser-Spiel für den Unterricht – inspiriert von Escape-Games rund um Stromausfall, Energiewende und TheRealTeacher - Technik
 
 Story:
 https://gemini.google.com/share/97996859cb2d
@@ -126,7 +126,7 @@ die Texte & `successCode` pro Level an.
 ![Blackout Lab Logo](assets/logo.png)
 
 > 🎮 A cooperative browser game for the classroom – inspired by escape games
-> about blackouts, energy storage and the All Electric Society.
+> about blackouts, energy storage and TheRealTeacher - Technik
 
 ---
 
