@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blackout Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <img src="assets/logo.png" alt="Blackout Lab Logo" class="logo">
+    <div class="title-block">
+      <h1>Blackout Lab</h1>
+      <p>A collaborative online escape game about the energy transition.</p>
+    </div>
+    <div id="timer" class="timer">⏱ Time: 00:00</div>
+  </header>
+
+  <main id="app">
+    <section id="intro" class="card card-house">
+      <div class="house-header"><span>Start</span></div>
+      <div class="card-content">
+        <p>The city has suffered a massive blackout. Everything is dark – almost everything. Work your way through the puzzles, find the codes, and restore power.</p>
+        <button id="btn-start" class="btn primary">Start Game</button>
+      </div>
+    </section>
+
+    <section id="level-container"></section>
+
+    <section id="outro" class="card card-house hidden">
+      <div class="house-header"><span>✅</span></div>
+      <div class="card-content">
+        <h2>Mission Accomplished!</h2>
+        <p id="outro-text"></p>
+        <button id="btn-restart" class="btn">Play Again</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/game-en.js"></script>
+</body>
+</html>
