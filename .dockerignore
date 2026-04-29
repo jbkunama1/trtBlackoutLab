@@ -1,0 +1,6 @@
+.git
+.gitignore
+docker
+doc
+*.md
+logo.png
